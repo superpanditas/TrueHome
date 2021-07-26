@@ -94,7 +94,8 @@ In this case, I decided to use Linear SVM (support vector machine) for the poten
 Again I am using a naive configuration but with good results. (personally the data is really linear separable then was enough ) but we can use grid search to find the best hyperparameters. The accuracy was super good! :thumbsup: :satisfied:
 ______________________________________________________________________________________________________________________________
 
-
+#### For more details, you can always check the files.ipynb.
+#### ¡Any comment is welcome!
 
 
 
