@@ -26,7 +26,60 @@ ________________________________________________________________________________
 __*First Challenge: Poisonous waters*__
 
 
+**Goal:** 
+
+
+
+______________________________________________________________________________________________________________________________
 __*Second Challenge: Para hacer la de Jamon*__
 
 
+
+**Goal:** Implementation of a model with the objective of scoring a variety of types of hams according with a historical base.
+
+**Identify Key Problems:** Imbalanced Data, Few Data & a lot of different labels.
+
+**Approach:** This is a Supervised Problem. 
+
+
+
+First of all we should to solve the problem of Imbalanced data, and one of the first techniques is create synthetic data with the disadvantage of increased noise. 
+
+
+
+And other problem is that with frequent in this type of techniques take at least 2 or more samples to generate data but in this occassion we have labels with just 1 sample. 
+
+
+
+It means that we are obligated to repetead samples (¡Althought is not so helpful!)
+
+
+
+In the other hand, one of the highlights is that our 3 features are correlated with the score and this is a good point. And the distribution is not bad, not presented many outliers. (almost nothing!) It is another good point!
+
+
+And since 2 of the variables are correlated to eliminate redundancy, I decided to use PCA which is also useful for visualization.
+
+
+I decided to address this with XGBoost algorithm, many reasons to choose him. This is an ensemble it means that take advantage of differents weak model to give an answer and is really useful when we have a lot of labels. 
+
+
+XGBoost is interpretable (In case we wish know which thresholds are useful to take a decision) and not previuos assumptions about data.
+
+
+Finally we got a 75% of accuracy, although 2 points here. First I used a naive configuration and keep a good accuracy, applying grid search can found the best hyper parameters and get a better accuracy. (for limitation of time, not use grid search but the accuracy is good)
+
+
+The second observation is measure just accuracy is not always good because we could have good prediction on some class but really bad on others. Recall and Presicion are good alternatives but in this occasion in the matrix confusion we can evaluate in more deep our results. (And I think is good!)
+
+
+______________________________________________________________________________________________________________________________
 __*Thrid Challenge: The Seductive Song of the Sirens*__
+
+
+
+**Goal:** Implementation of a model with the objective of classifying between endemic sirens and migrant sirens according with a historical base.
+
+**Identify Key Problems:** Not many problems as previous exercises. We have two class, and balanced data
+
+**Approach:** 
