@@ -61,16 +61,16 @@ In the other hand, one of the highlights is that our 3 features are correlated w
 And since 2 of the variables are correlated to eliminate redundancy, I decided to use PCA which is also useful for visualization.
 
 
-I decided to address this with XGBoost algorithm, many reasons to choose him. This is an ensemble it means that take advantage of differents weak model to give an answer and is really useful when we have a lot of labels. 
+I decided to address this with XGBoost algorithm, many reasons to choose him. This is an ensemble it means that take advantage of differents weak models to give an answer and is really useful when we have a lot of labels. 
 
 
 XGBoost is interpretable (In case we wish know which thresholds are useful to take a decision) and not previuos assumptions about data.
 
 
-Finally we got a 75% of accuracy, although 2 points here. First I used a naive configuration and keep a good accuracy, applying grid search can found the best hyper parameters and get a better accuracy. (for limitation of time, not use grid search but the accuracy is good)
+Finally we got a 75% of accuracy, although 2 points here. First I used a naive configuration and keep a good accuracy, applying grid search can found the best hyperparameters and get a better accuracy. (for limitation of time, not use grid search but the accuracy is good)
 
 
-The second observation is measure just accuracy is not always good because we could have good prediction on some class but really bad on others. Recall and Presicion are good alternatives but in this occasion in the matrix confusion we can evaluate in more deep our results. (And I think is good!)
+The second observation is measure just accuracy is not always good because we could have good prediction on some class but really bad on others. Recall and Precision are good alternatives but in this occasion in the matrix confusion we can evaluate in more deep our results. (And I think is good!) :thumbsup: :satisfied:
 
 
 ______________________________________________________________________________________________________________________________
@@ -80,6 +80,21 @@ __*Thrid Challenge: The Seductive Song of the Sirens*__
 
 **Goal:** Implementation of a model with the objective of classifying between endemic sirens and migrant sirens according with a historical base.
 
-**Identify Key Problems:** Not many problems as previous exercises. We have two class, and balanced data
+**Identify Key Problems:** Not many problems as previous exercises. We have two class, not null values, and balanced data. We just can noted outliers, bi-modal distributions (in case we wish to use parametric models), really close distributions between class, and redundacy on our data.
 
-**Approach:** 
+**Approach:** This is a Supervised Problem
+
+
+As a mentioned before, not found really big problems. The first approach is remove redundancy, and in this case use PCA (principal component analysis) followed of one visualization and immediately found that we have a data linearly separable.
+
+
+In this case, I decided to use Linear SVM (support vector machine) for the potentical to create robust model with few data, and given just have 2 variables (I am using pca(n_components=2)) and without outliers. 
+
+
+Again I am using a naive configuration but with good results. (personally the data is really linear separable then was enough ) but we can use grid search to find the best hyperparameters. The accuracy was super good! :thumbsup: :satisfied:
+______________________________________________________________________________________________________________________________
+
+
+
+
+
