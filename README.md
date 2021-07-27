@@ -72,10 +72,12 @@ In the other hand, one of the highlights is that our 3 features are correlated w
 And since 2 of the variables are correlated to eliminate redundancy, I decided to use PCA which is also useful for visualization.
 
 
-I decided to address this with XGBoost algorithm, many reasons to choose him. This is an ensemble it means that take advantage of differents weak models to give an answer and is really useful when we have a lot of labels. 
+I decided to address this with XGBoost algorithm, many reasons to choose him. 
 
 
-XGBoost is interpretable (In case we wish know which thresholds are useful to take a decision) and not previuos assumptions about data.
+This is an ensemble it means that take advantage of differents weak models to give an answer.
+
+XGBoost is interpretable (In case we wish know which thresholds are useful to take a decision), not previuos assumptions about data and works good for imbalanced data.
 
 
 Finally we got a 75% of accuracy, although 2 points here. First I used a naive configuration and keep a good accuracy, applying grid search can found the best hyperparameters and get a better accuracy. (for limitation of time, not use grid search but the accuracy is good)
