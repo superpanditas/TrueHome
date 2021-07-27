@@ -26,9 +26,20 @@ ________________________________________________________________________________
 __*First Challenge: Poisonous waters*__
 
 
-**Goal:** 
+**Goal:** Identify the most closer 50 samples to poison sample.
+
+**Identify Key Problems** Find an optimal way to find the most closer samples of the target
+
+**Approach*** 
 
 
+First of all, review the dataset like distributions, outliers, empty values and so on.
+
+
+I decided to apply k-means to generate de some clusters with the objective to know what is the most potential samples to use. 
+
+
+One time with the cohorts, I used a grouping by cluster to know where is the most similarity with my target then used it to get the distance for finally sort by less distance. 
 
 ______________________________________________________________________________________________________________________________
 __*Second Challenge: Para hacer la de Jamon*__
