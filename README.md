@@ -87,7 +87,7 @@ The second observation is measure just accuracy is not always good because we co
 
 
 ______________________________________________________________________________________________________________________________
-__*Thrid Challenge: The Seductive Song of the Sirens*__
+__*Third Challenge: The Seductive Song of the Sirens*__
 
 
 
